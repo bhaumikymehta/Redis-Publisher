@@ -1,0 +1,9 @@
+This is application is simple application to start and publishing on redis using api endpoint
+Server port to run is 8081
+
+To start the application first we need to start the docker server using docker-compose up -d
+
+Then run the application using ./mvnw spring-boot:run
+
+To publish message use below curl:
+curl -X POST -H "Content-Type: application/json" -d '{"key": "value"}' http://localhost:8081/api/send
